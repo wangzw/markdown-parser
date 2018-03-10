@@ -14,7 +14,7 @@ MarkdownParser.prototype.init = function() {
   return this;
 };
 
-MarkdownParser.prototype.parse = function(markdown, next) {
+MarkdownParser.prototype.parse = function(markdown) {
   var result = pegparser.parse(markdown);
 
   // relative or absolute links
@@ -26,10 +26,8 @@ MarkdownParser.prototype.parse = function(markdown, next) {
       }
     }); 
   }
-    
-  return process.nextTick(function() {
-    next(null, result);
-  });  
+
+  return result;
 };
 
 module.exports = MarkdownParser;
