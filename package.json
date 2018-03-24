@@ -1,7 +1,7 @@
 {
   "name": "markdown-parser2",
   "description": "Markdown github parser",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "author": {
     "name": "Julien Valéry",
     "email": "darul75@gmail.com"
